@@ -1,8 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
 Vue.use(VueRouter)
+
 Vue.config.productionTip = false
+
+Vue.http.headers.common['Access-Control-Allow-Origin'] = '*'
+Vue.http.headers.common['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, Authorization, Access-Control-Allow-Origin'
 
 import GithubAuth from './components/GithubAuth.vue'
 import GithubCallback from './components/GithubCallback.vue'

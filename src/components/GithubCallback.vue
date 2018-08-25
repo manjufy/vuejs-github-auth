@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <p>
-      Github Callback
+      Github Callback - Code {{ this.code }}
     </p>
   </div>
 </template>
@@ -14,10 +13,12 @@ export default {
     msg: String
   },
   created() {
-    console.log(this.$router.query)
+    console.log('', this.$route.query)
+    console.log('this Coe', this.code)
   },
   data() {
     return {
+      code: this.$route.query
     }
   },
   methods: {

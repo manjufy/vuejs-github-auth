@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <GithubAuth msg="Welcome to Github Basic Authentication Example With Vue.js"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import GithubAuth from './components/GithubAuth.vue'
+import GithubCallback from './components/GithubCallback.vue'
 
 export default {
   name: 'app',
   components: {
-    GithubAuth
+    GithubAuth,
+    GithubCallback
   }
 }
 </script>

@@ -1,4 +1,4 @@
-# vue-github-auth
+# VueJs Githug Authentication
 
 ## Project setup
 ```

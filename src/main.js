@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 // Vue.http.headers.common['Access-Control-Allow-Origin'] = '*'
 Vue.http.headers.common['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, Authorization, Access-Control-Allow-Origin'
 Vue.http.headers.common['Access-Control-Allow-Methods'] = 'GET,PUT,POST,DELETE,OPTIONS'
+Vue.http.headers.common['Access-Control-Allow-Credentials'] = true
 
 import GithubAuth from './components/GithubAuth.vue'
 import GithubCallback from './components/GithubCallback.vue'

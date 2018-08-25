@@ -17,8 +17,9 @@ export default {
   },
   data() {
     return {
-      GH_CLIENT_ID: '13713e448956673736bb',
-      GH_CLIENT_SECRET: 'c1b575cce6f3fc4e77ec829c6bcd7657ebd6a9ce'
+      // Get to Github -> Settings -> Developer settings section; create an app and get clientId and secret
+      GH_CLIENT_ID: '13713e448956673736bb',  // replace with your github app clientId
+      GH_CLIENT_SECRET: 'c1b575cce6f3fc4e77ec829c6bcd7657ebd6a9ce' // replace with your githug app secret
     }
   },
   methods: {

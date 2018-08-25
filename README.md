@@ -1,4 +1,4 @@
-# VueJs Githug Authentication
+# VueJs Githug Authentication [In Progress]
 
 ## Project setup
 ```

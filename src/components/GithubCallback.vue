@@ -18,7 +18,8 @@ export default {
   },
   data() {
     return {
-      code: this.$route.query
+      code: this.$route.query,
+      loading: false
     }
   },
   methods: {

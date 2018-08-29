@@ -4,7 +4,7 @@ _DOCUMENTATION IN PGORESS_
 
 NOTE: add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
 
-DEPENDENCY:  
+DEPENDENCY:  https://github.com/manjufy/nodejs-github-auth/blob/master/src/server.js
 
 ## Project setup
 ```

@@ -1,5 +1,11 @@
 # VueJs Githug Authentication [In Progress]
 
+_DOCUMENTATION IN PGORESS_
+
+NOTE: add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
+
+DEPENDENCY:  
+
 ## Project setup
 ```
 npm install

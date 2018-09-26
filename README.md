@@ -9,11 +9,14 @@ Unlike other social authentications, Github authentication flow is bit different
 Github Web application flow
 
 #### Step-1: User is redirected to request their Github Identity - *FRONTEND*
-    `GET https://github.com/login/oauth/authorize`
+
+    GET https://github.com/login/oauth/authorize
 
 #### Step-2: User is redirected back to your site by Github with temporary code - *BACKEND*
-    If the user accept the request, Github redirects back to the site with a temporary `code` and `state`
-    `GET http://yoursite.dev.com?code={code}&state={state}`
+   
+   If the user accept the request, Github redirects back to the site with a temporary `code` and `state`
+    
+    GET http://yoursite.dev.com?code={code}&state={state}
 
     Exchange this code for access token
 
@@ -27,11 +30,10 @@ Github Web application flow
     Response => `access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&token_type=bearer`
 
 ### Step-3: Now use the access token to access the API - *FRONTEND*
+    
     Now with the access token, we can make a request to Github API on behalf of a user and get access to user information
 
     `curl -H "Authorization: token OAUTH-TOKEN" https://api.github.com/user`
-
-
 
 
 NOTE: add this to your hosts file `dev.githubauth.com` or any localhost name you prefer

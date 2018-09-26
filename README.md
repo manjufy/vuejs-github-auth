@@ -24,7 +24,8 @@ Github Web application flow
 
                 `client_id, client_secret, code, redirect_uri, state`
     
-    *Here is the main problem. We can't make the above POST request from the browser directly due to security issue. One would have to make that call through backend API call. This is the part that confuses many developers* as Github documentation is not that clear*
+   **Here is the main problem. We can't make the above POST request from the browser directly due to security issue. One would have to make that call through backend API call. This is the part that confuses many developers* as Github documentation is not that clear**
+  
     As demonstrated here https://github.com/manjufy/nodejs-github-auth
 
     Response => `access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&token_type=bearer`

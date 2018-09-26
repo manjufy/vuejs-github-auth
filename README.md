@@ -6,36 +6,38 @@ VueJs Github Authentication Example
 
 Unlike other social authentications, Github authentication flow is bit different and requires to go through frontend and backend calls to get the user to authorise to your app.
 
-Github Web application flow
 
-#### Step-1: User is redirected to request their Github Identity - *FRONTEND*
+### Web Application Flow
 
-    GET https://github.com/login/oauth/authorize
+* Redirect to this link to request GitHub access:
 
-#### Step-2: User is redirected back to your site by Github with temporary code - *BACKEND*
-   
-   If the user accept the request, Github redirects back to the site with a temporary `code` and `state`
-    
-    GET http://yoursite.dev.com?code={code}&state={state}
+<pre><code>https://github.com/login/oauth/authorize?
+  client_id=...&
+  redirect_uri=http://www.example.com/oauth_redirect</code></pre>
 
-    Exchange this code for access token
+* If the user accepts your request, GitHub redirects back to your site with 
+  a temporary code in a `code` parameter.  Exchange this for an access token:
 
-    Request => `POST https://github.com/login/oauth/access_token` with the following form data
+<pre><code>POST https://github.com/login/oauth/access_token?
+  client_id=...&
+  redirect_uri=http://www.example.com/oauth_redirect&
+  client_secret=...&
+  code=...
 
-                `client_id, client_secret, code, redirect_uri, state`
-  
- __We can't make the above POST request from the browser directly due to security issue, this is the step Github documentation fails to explain. One would have to make that call through backend API call. This is the part that confuses many developers as Github documentation is not that clear__
-  
-    As demonstrated here https://github.com/manjufy/nodejs-github-auth
+RESPONSE:
+access_token=...</code></pre>
 
-    Response => `access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&token_type=bearer`
+__Github does not allow you to make above POST request from the browser directly due to security issue, this is the step Github documentation fails to explain. One would have to make that call through backend API call. This is the part that confuses many developers as Github documentation is not that clear__
 
-### Step-3: Now use the access token to access the API - *FRONTEND*
-    
-    Now with the access token, we can make a request to Github API on behalf of a user and get access to user information
+* You have the access token, so now you can make requests on the user's behalf:
 
-    `curl -H "Authorization: token OAUTH-TOKEN" https://api.github.com/user`
+<pre><code>GET https://api.github.com/user?
+  access_token=...</code></pre>
 
+<pre><code>GET https://api.github.com/user/emails?
+  access_token=...</code></pre>
+
+## Auth Flow Diagram
 
 NOTE: add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
 

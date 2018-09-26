@@ -23,8 +23,8 @@ Github Web application flow
     Request => `POST https://github.com/login/oauth/access_token` with the following form data
 
                 `client_id, client_secret, code, redirect_uri, state`
-    
-   **Here is the main problem. We can't make the above POST request from the browser directly due to security issue. One would have to make that call through backend API call. This is the part that confuses many developers* as Github documentation is not that clear**
+  
+ __Here is the main problem. We can't make the above POST request from the browser directly due to security issue. One would have to make that call through backend API call. This is the part that confuses many developers* as Github documentation is not that clear__
   
     As demonstrated here https://github.com/manjufy/nodejs-github-auth
 

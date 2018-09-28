@@ -39,11 +39,15 @@ __Github does not allow you to make above POST request from the browser directly
 
 ## Auth Flow Diagram
 
+<img src="src/assets/github-auth-flow.png">
+
+## Project setup
+
 NOTE: add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
 
 DEPENDENCY:  https://github.com/manjufy/nodejs-github-auth/blob/master/src/server.js
 
-## Project setup
+
 ```
 npm install
 ```
@@ -66,6 +70,5 @@ npm run lint
 ### Github Authentication
 
 https://developer.github.com/v3/guides/basics-of-authentication/
-
 
 https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/

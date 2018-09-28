@@ -49,24 +49,33 @@ API is https://github.com/manjufy/nodejs-github-auth/
 
 To make both front-end and backend work together with the same domain name, add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
 
+### To run the front end i.e. the current repo
+
+Git clone the repo
+
+```
+git clone https://github.com/manjufy/vuejs-github-auth.git
+
+cd > vuejs-github-auth
+```
+
+Then 
+
 ```
 npm install
+
+npm run serve // Compiles and hot-reloads for development
+
+npm run build  // Compiles and minifies for production (optional)
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Then Visit http://dev.githubauth.com:8080/
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<img src="src/assets/home.png">
 
-### Lints and fixes files
-```
-npm run lint
-```
+_Also make sure to run API_
+
+Refer: https://github.com/manjufy/nodejs-github-auth/
 
 ### Github Authentication
 

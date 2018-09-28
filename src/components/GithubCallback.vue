@@ -19,7 +19,7 @@ export default {
     console.log('Calling API to get the access token.')
     axios.get(`http://dev.githubauth.com:3333/auth?code=${code}`).then(data => {
       // call github to get user info
-      axios.get(`https://api.github.com/user?access_token=${}`, {
+      axios.get(`https://api.github.com/user`, {
           params: {
             access_token: data.data.access_token
           }

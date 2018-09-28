@@ -47,7 +47,7 @@ This repo is _Front end_
 
 API is https://github.com/manjufy/nodejs-github-auth/
 
-To make both front-end and backend work together with the same domain name, add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
+To make both frontend and backend work together with the same domain name, add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
 
 ### To run the front end i.e. the current repo
 

@@ -72,6 +72,11 @@ __Also make sure to run API__
 
 Refer: https://github.com/manjufy/nodejs-github-auth/
 
+### TODO
+
+- Call Github API with access_token to get User information
+- Call Github API with access_token to get User emails
+
 ### Github Authentication
 
 https://developer.github.com/v3/guides/basics-of-authentication/

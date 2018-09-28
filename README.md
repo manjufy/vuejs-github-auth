@@ -51,17 +51,12 @@ To make both frontend and backend work together with the same domain name, add t
 
 ### To run the front end i.e. the current repo
 
-Git clone the repo
 
 ```
 git clone https://github.com/manjufy/vuejs-github-auth.git
 
 cd > vuejs-github-auth
-```
 
-Then 
-
-```
 npm install
 
 npm run serve // Compiles and hot-reloads for development
@@ -73,7 +68,7 @@ Then Visit http://dev.githubauth.com:8080/
 
 <img src="src/assets/home.png">
 
-_Also make sure to run API_
+__Also make sure to run API__
 
 Refer: https://github.com/manjufy/nodejs-github-auth/
 

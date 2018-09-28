@@ -43,7 +43,7 @@ __Github does not allow you to make above POST request from the browser directly
 
 ## Project setup
 
-This is repo is _Front end_
+This repo is _Front end_
 
 API is https://github.com/manjufy/nodejs-github-auth/
 

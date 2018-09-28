@@ -7,7 +7,7 @@ VueJs Github Authentication Example
 Unlike other social authentications, Github authentication flow is bit different and requires to go through frontend and backend calls to get the user to authorise to your app.
 
 
-### Web Application Flow
+### Githun Web Authentication Application Flow
 
 * Redirect to this link to request GitHub access:
 
@@ -43,10 +43,11 @@ __Github does not allow you to make above POST request from the browser directly
 
 ## Project setup
 
-NOTE: add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
+This is repo is _Front end_
 
-DEPENDENCY:  https://github.com/manjufy/nodejs-github-auth/blob/master/src/server.js
+API is https://github.com/manjufy/nodejs-github-auth/
 
+To make both front-end and backend work together with the same domain name, add this to your hosts file `dev.githubauth.com` or any localhost name you prefer
 
 ```
 npm install

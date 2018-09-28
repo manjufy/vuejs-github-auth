@@ -76,6 +76,7 @@ Refer: https://github.com/manjufy/nodejs-github-auth/
 
 - Call Github API with access_token to get User information
 - Call Github API with access_token to get User emails
+- Implement NPM Package to get acces_token
 
 ### Github Authentication
 

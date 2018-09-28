@@ -25,6 +25,9 @@ export default {
           }
       }).then(data => {
         console.log('User', data)
+        // Now we have the access token, we can call following GITHUB endpoints to get user info
+        // https://api.github.com/user?access_token=data.data.access_token
+        // https://api.github.com/user/emails?access_token=data.data.access_token
       }).catch(error => {
         console.log('Error', error)
       })

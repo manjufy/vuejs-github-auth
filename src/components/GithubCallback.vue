@@ -14,24 +14,29 @@ export default {
   props: {
     msg: String
   },
-  created() {
+  async created() {
     const code = this.$route.query.code
     console.log('Calling API to get the access token.')
-    axios.get(`http://dev.githubauth.com:3333/auth?code=${code}`).then(data => {
-      // call github to get user info
-      axios.get(`https://api.github.com/user`, {
-          params: {
-            access_token: data.data.access_token
-          }
-      }).then(data => {
-        console.log('User', data)
-        // Now we have the access token, we can call following GITHUB endpoints to get user info
-        // https://api.github.com/user?access_token=data.data.access_token
-        // https://api.github.com/user/emails?access_token=data.data.access_token
-      }).catch(error => {
-        console.log('Error', error)
-      })
-    })
+    const response = await axios.get(`http://dev.githubauth.com:3333/auth?code=${code}`)
+    const user = await axios.get(`https://api.github.com/user?access_token=${response.data.access_token}`)
+    const emails = await axios.get(`https://api.github.com/user/emails?access_token=${response.data.access_token}`)
+
+    console.log('Githug', user, emails)
+  // axios.get(`http://dev.githubauth.com:3333/auth?code=${code}`).then(data => {
+  //     // call github to get user info
+  //     axios.get(`https://api.github.com/user`, {
+  //         params: {
+  //           access_token: data.data.access_token
+  //         }
+  //     }).then(data => {
+  //       console.log('User', data)
+  //       // Now we have the access token, we can call following GITHUB endpoints to get user info
+  //       // https://api.github.com/user?access_token=data.data.access_token
+  //       // https://api.github.com/user/emails?access_token=data.data.access_token
+  //     }).catch(error => {
+  //       console.log('Error', error)
+  //     })
+  //   })
   },
   data() {
     return {
